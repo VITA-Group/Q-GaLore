@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients"
+version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Zhenyu"
+    given-names: "Zhang"
+year: 2024
+repository-code: "TBD"
