@@ -152,7 +152,6 @@ dependencies:
       - jsonschema-specifications==2023.12.1
       - kiwisolver==1.4.5
       - lion-pytorch==0.1.4
-      - llamafactory==0.7.2.dev0
       - loguru==0.7.2
       - markdown-it-py==3.0.0
       - matplotlib==3.7.5
