@@ -10,7 +10,13 @@ Q-GaLore is a memory-efficient training methodology effective in both pre-traini
 
 ### Install Q-GaLore optimizer
 
-##### Install Q-GaLore optimizer
+##### Install via conda
+
+```
+conda env create -f environment.yml
+```
+
+##### or Install Q-GaLore optimizer and experiment dependencies
 
 ```bash
 # install from pip
@@ -21,11 +27,7 @@ pip install q-galore-torch
 git clone https://github.com/VITA-Group/Q-GaLore.git
 cd Q-GaLore
 pip install -e .
-```
 
-Install experiment dependencies
-
-```bash
 pip install -r exp_requirements.txt
 ```
 
