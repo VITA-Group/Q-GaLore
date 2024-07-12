@@ -89,18 +89,6 @@ torchrun --standalone --nproc_per_node 1 run_pretrain.py \
 
 ## Citation
 
-```
-@misc{zhang2024qgalore,
-      title={Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients}, 
-      author={Zhenyu Zhang and Ajay Jaiswal and Lu Yin and Shiwei Liu and Jiawei Zhao and Yuandong Tian and Zhangyang Wang},
-      year={2024},
-      eprint={2407.08296},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2407.08296}, 
-}
-```
-
 ```bibtex
 @misc{zhang2024qgalore,
       title={Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients}, 
