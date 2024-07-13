@@ -8,6 +8,8 @@ Q-GaLore is a memory-efficient training methodology effective in both pre-traini
   <img src="imgs/q-galore.jpg" alt="Image 2" style="width: 550px; margin: 0 auto;">
 </div>
 
+Read this [blog](https://www.linkedin.com/pulse/introducing-galore-v2-q-galore-latest-milestone-low-rank-atlas-wang-lpijc/?trackingId=Yk7Uh3ptT0uoKE5TQwWPLA%3D%3D) for more details!
+
 ### Install Q-GaLore optimizer
 
 ##### Install via conda
