@@ -90,6 +90,34 @@ torchrun --standalone --nproc_per_node 1 run_pretrain.py \
     --optimizer q_galore_adamw8bit_per_layer
 
 ```
+Got it! Here's the revised paragraph for the README file, including instructions to search for the `dist.init_process_group` line and update it, along with the command to run the training script on Windows:
+
+---
+
+### Running on Windows
+
+To run this project on Windows, follow these steps:
+
+1. **Modify the Backend**: Since NCCL is not supported on Windows, you need to change the backend to GLOO. In your `run_pretrain.py` script, search for the line:
+    ```python
+    dist.init_process_group(backend="nccl", rank=global_rank, world_size=world_size)
+    ```
+    and update it to:
+    ```python
+    dist.init_process_group(backend="gloo", rank=global_rank, world_size=world_size)
+    ```
+
+2. **Run the Training Script**: Use the following command to start the training process. This command includes various parameters for model configuration, learning rate, batch size, and more:
+    ```powershell
+    python -m torch.distributed.run --standalone --nproc_per_node=1 run_pretrain.py --model_config configs/llama_100m.json --lr 0.004 --galore_scale 0.25 --rank 1024 --update_proj_gap 500 --batch_size 16 --total_batch_size 512 --activation_checkpointing --num_training_steps 150000 --warmup_steps 15000 --weight_decay 0 --grad_clipping 1.0 --dtype bfloat16 --eval_every 1000 --single_gpu --proj_quant --weight_quant --stochastic_round --optimizer q_galore_adamw8bit_per_layer
+    ```
+
+3. **Log Out of W&B**: If you want to run the project without connecting to your current Weights & Biases (W&B) account, you can log out of your current account and log in with a different one:
+    ```powershell
+    wandb logout
+    wandb login
+    ```
+
 
 ## Citation
 
@@ -104,3 +132,4 @@ torchrun --standalone --nproc_per_node 1 run_pretrain.py \
       url={https://arxiv.org/abs/2407.08296}, 
 }
 ```
+
